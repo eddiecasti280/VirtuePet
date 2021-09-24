@@ -1,2 +1,0 @@
-# VirtuePet
-Virtual pet simulator
