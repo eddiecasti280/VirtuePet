@@ -5,6 +5,8 @@ extends KinematicBody2D
 # var a = 2
 # var b = "text"
 var happiness : int = 0
+var hunger : int = 0
+var experience : int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

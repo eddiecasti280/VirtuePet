@@ -1,0 +1,20 @@
+[gd_scene format=2]
+
+[node name="User_Interface" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Happiness" type="ProgressBar" parent="."]
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Hunger" type="ProgressBar" parent="."]
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Experience" type="ProgressBar" parent="."]
+margin_right = 4.0
+margin_bottom = 14.0
