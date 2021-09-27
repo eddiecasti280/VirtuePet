@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/bedroom.PNG" type="Texture" id=1]
 [ext_resource path="res://Pet.tscn" type="PackedScene" id=2]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 47.0762, 506.471 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 79.3622, 512.957 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -14,5 +20,20 @@ texture = ExtResource( 1 )
 position = Vector2( 425.065, 370.074 )
 scale = Vector2( 2, 2 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( 10.9277, 521.399 )
+[node name="Wall_2" type="StaticBody2D" parent="."]
+
+[node name="Wall_2_collision" type="CollisionShape2D" parent="Wall_2"]
+position = Vector2( 1072.11, 92.7486 )
+shape = SubResource( 2 )
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="Floor_collision" type="CollisionPolygon2D" parent="Floor"]
+position = Vector2( -66.4131, 536.231 )
+polygon = PoolVector2Array( -9.88719, 6.43604, 80.1672, -48.6561, 191.411, -76.2021, 333.379, -111.164, 446.741, -120.7, 569.639, -123.878, 698.894, -118.581, 940.451, -77.2616, 1042.16, -41.2398, 1129.04, -2.03967, 1138.57, 9.61438, 1139.63, 61.5281, -12.0061, 59.4092 )
+
+[node name="Wall_1" type="StaticBody2D" parent="."]
+
+[node name="Wall_1_collision" type="CollisionShape2D" parent="Wall_1"]
+position = Vector2( -79.3701, 84.1322 )
+shape = SubResource( 1 )
